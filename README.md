@@ -39,54 +39,54 @@ EMAIL_PASS =
 
 ### Sign Up
 
-- **Route:** `POST /api/users/signup`
+- **Route:** `POST /users/signup`
 - **Description:** Sign up a new user.
 - **Middleware:** `validateSignUp`
 - **Handler:** `signUp`
 
 ### Sign In
 
-- **Route:** `POST /api/users/signin`
+- **Route:** `POST /users/signin`
 - **Description:** Log in a user.
 - **Middleware:** `validateSignIn`
 - **Handler:** `signIn`
 
 ### Verify Account
 
-- **Route:** `GET /api/verify/:id`
+- **Route:** `GET /verify/:id`
 - **Description:** Verify a user's account using a verification link.
 
 ### Change Password
 
-- **Route:** `PATCH /api/users/changepass`
+- **Route:** `PATCH /users/changepass`
 - **Description:** Change the password of a logged-in user.
 - **Middleware:** `verifyAuthorization`, `validateChangePass`
 - **Handler:** `changePassword`
 
 ### Update User
 
-- **Route:** `PATCH /api/users/update`
+- **Route:** `PATCH /users/update`
 - **Description:** Update user information (age, firstName, lastName).
 - **Middleware:** `verifyAuthorization`, `validateUpdate`
 - **Handler:** `updateUser`
 
 ### Delete User
 
-- **Route:** `GET /api/users/delete`
+- **Route:** `GET /users/delete`
 - **Description:** Delete a user account (hard delete).
 - **Middleware:** `verifyAuthorization`
 - **Handler:** `deleteUser`
 
 ### Soft Delete User
 
-- **Route:** `GET /api/users/softdelete`
+- **Route:** `GET /users/softdelete`
 - **Description:** Soft delete a user account (mark as deleted).
 - **Middleware:** `verifyAuthorization`
 - **Handler:** `softDeleteUser`
 
 ### User Logout
 
-- **Route:** `GET /api/users/logout`
+- **Route:** `GET /users/logout`
 - **Description:** Log out a user.
 - **Middleware:** `verifyAuthorization`
 - **Handler:** `userLogout`
@@ -95,33 +95,33 @@ EMAIL_PASS =
 
 ### Add Task
 
-- **Route:** `POST /api/tasks`
+- **Route:** `POST /tasks`
 - **Description:** Add a new task with a "toDo" status.
 - **Middleware:** `verifyAuthorization`, `validateAdd`
 - **Handler:** `addTask`
 
 ### Update Task
 
-- **Route:** `PATCH /api/tasks`
+- **Route:** `PATCH /tasks`
 - **Description:** Update task information (title, description, status) for a task created by the logged-in user.
 - **Middleware:** `verifyAuthorization`, `validateUpdate`
 - **Handler:** `updateTask`
 
 ### Delete Tasks
 
-- **Route:** `DELETE /api/tasks`
+- **Route:** `DELETE /tasks`
 - **Description:** Delete tasks created by the logged-in user.
 - **Middleware:** `verifyAuthorization`, `validateDelete`
 - **Handler:** `deleteTasks`
 
 ### Get Tasks with Users
 
-- **Route:** `GET /api/taskswithusers`
+- **Route:** `GET /taskswithusers`
 - **Description:** Get all tasks along with user data.
 
 ### Overdue Tasks
 
-- **Route:** `GET /api/overduetasks`
+- **Route:** `GET /overduetasks`
 - **Description:** Get all tasks that are not done after the deadline.
 
 ---
