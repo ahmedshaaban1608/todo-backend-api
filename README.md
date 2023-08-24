@@ -12,8 +12,8 @@ This is the backend API for a TODO app that provides functionalities for user ma
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/ahmedshaaban1608/todo-app-backend.git
-cd todo-app-backend
+git clone https://github.com/ahmedshaaban1608/todo-backend-api.git
+cd todo-backend-api
 ```
 
 2. Install dependencies:
